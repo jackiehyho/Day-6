@@ -1,0 +1,115 @@
+body {
+    background: #444444;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin:0;
+}
+
+.card{
+    background-color:black;
+    width: 400px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card span{
+    position:absolute;
+    
+}
+
+.card h1{
+    font-family: "arial", sans-serif;
+}
+
+
+
+.card:hover #left{
+    background: linear-gradient(to top, transparent, #FF0000);
+    bottom: 0;
+    left: 0;
+    animation: borderLeft 2s linear infinite;
+    width: 2px;
+    height: 100%;
+}
+
+.card:hover #right{
+    background: linear-gradient(to bottom, transparent, #FF0000);
+    top: 0;
+    right: 0;
+    animation: borderRight 2s linear infinite;
+    width: 2px;
+    height: 100%;
+}
+
+.card:hover #top{
+    background: linear-gradient(to right, transparent, #FF0000);
+    top:  0;
+    left:  0;
+    animation: borderTop 2s linear infinite;
+    width: 100%;
+    height: 2px;
+    animation-delay: 1s;
+
+
+}
+
+.card:hover #bottom{
+    background: linear-gradient(to left, transparent, #FF0000);
+    bottom:  0;
+    right:  0;
+    animation: borderBottom 2s linear infinite;
+    width: 100%;
+    height: 2px;
+    animation-delay: 1s;
+
+
+}
+
+@keyframes borderLeft
+{
+    0%{
+        transform:translateY(100%);
+    }
+    100%{
+        transform:translateY(-100%);
+    }
+}
+
+@keyframes borderRight
+{
+    0%{
+        transform:translateY(-100%);
+    }
+    100%{
+        transform:translateY(100%);
+    }
+}
+
+
+@keyframes borderTop
+{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes borderBottom
+{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
